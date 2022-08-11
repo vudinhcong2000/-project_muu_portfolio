@@ -1,38 +1,433 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #161616;
+  color: #6a6a6a;
+}
+/* ----------------- global ----------------- */
+.container {
+  max-width: 90%;
+  margin: auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.flexSB {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: space-between;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+/* ----------------- global ----------------- */
+/* ----------------- header ----------------- */
+header {
+  height: 8vh;
+  line-height: 8vh;
+}
+.logo h1 {
+  font-size: 45px;
+}
+
+.logo h1 span {
+  color: #1ebd65;
+}
+
+.toggle {
+  font-size: 25px;
+  color: #1ebd65;
+  cursor: pointer;
+  background: none;
+}
+
+.nav-links {
+  display: none;
+}
+
+.nav-links-sidebar {
+  position: absolute;
+  display: block;
+  background-color: #1ebd65;
+  left: 0;
+  top: 60px;
+  transition: 0.5s;
+  width: 100%;
+  height: 100vh;
+  z-index: 5;
+  margin-bottom: 30px;
+  padding-left: 5%;
+}
+
+header ul li {
+  margin-bottom: 30px;
+  /* list-style: none; */
+}
+
+header ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+/* ----------------- header ----------------- */
+
+/* ----------------- home ----------------- */
+.home {
+  position: relative;
+}
+
+.home .itemContent {
+  padding: 20px;
+  margin: 0;
+  border: 20px solid #2f2f2f;
+  height: 90vh;
+  position: relative;
+}
+
+.home .left {
+  width: 30%;
+  margin-left: 5%;
+}
+
+.home .right {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.home .right img {
+  width: 100%;
+  height: 100%;
+}
+
+.home h1 {
+  font-size: 50px;
+  word-wrap: break-word;
+  margin: 30px 0;
+  line-height: 60px;
+}
+
+.home p {
+  font-size: 20px;
+  line-height: 35px;
+}
+/* ----------------- home ----------------- */
+/* ----------------- about ----------------- */
+.about {
+  position: relative;
+}
+.itemContent {
+  margin: 40px 0;
+  border: 20px solid #2f2f2f;
+  height: 90vh;
+  position: relative;
+  display: flex;
+}
+
+.flex {
+  display: flex;
+}
+
+.sideHeading {
+  height: 85vh;
+  background-color: #222222;
+  width: 150px;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.sideHeading h1 {
+  position: absolute;
+  top: 42%;
+  left: -60px;
+  margin: auto;
+  font-size: 38px;
+  transform: rotate(-90deg);
+  font-weight: 500;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.sideHeading h1 i {
+  color: #1ebd65;
+  margin-right: 20px;
 }
+
+.contentRight,
+.contentLeft {
+  width: 39vw;
+  padding: 0 50px;
+  position: relative;
+}
+
+.about .contentLeft {
+  padding-top: 15%;
+}
+
+/* .about .contentRight,
+.about .contentLeft {
+  padding: 0;
+} */
+
+.about h2 {
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.about .h2Top {
+  width: 170px;
+}
+
+.about .details {
+  margin-bottom: 20px;
+}
+button {
+  background-color: none;
+  border: none;
+  outline: none;
+  word-spacing: 3px;
+  font-weight: 500;
+}
+
+.primary-btn {
+  padding: 7px 30px;
+  background-color: #1ebd65;
+  color: #fff;
+  margin-top: 30px;
+}
+.about .contentLeft::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("../public/images/about-me-bg.jpg");
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.about .heading h1 {
+  font-size: 50px;
+  text-align: center;
+  padding: 40px 0;
+  /* khoảng cách giữ các từ */
+  word-spacing: 5px;
+}
+
+.about .contentRight {
+  padding: 0;
+}
+
+.about .para {
+  background-color: #2f2f2f;
+  padding: 66px;
+}
+
+.about .para h3 {
+  margin: 30px 0;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+p {
+  font-size: 17px;
+  line-height: 30px;
+}
+
+/* ----------------- about ----------------- */
+/* ----------------- creative ----------------- */
+.creative {
+  position: relative;
+}
+.creative .sideHeading h1 {
+  left: -50px;
+}
+
+.creative .contentRight {
+  padding: 0;
+}
+
+.creative img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.creative .quote {
+  font-size: 50px;
+  color: #1ebd65;
+  margin: 20px 0;
+}
+
+.creative .content h1 {
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.creative .content h3 {
+  margin: 40px 0 20px 0;
+  font-weight: 400;
+  font-size: 20px;
+  color: #1ebd65;
+}
+/* ----------------- creative ----------------- */
+/* ----------------- education ----------------- */
+.education .box {
+  margin-top: 20px;
+}
+
+.education .content h1 {
+  font-size: 40px;
+  color: #1ebd65;
+  margin-right: 30px;
+}
+
+.education .content h2 {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.education .contentLeft {
+  padding: 80px 50px;
+}
+/* ----------------- education ----------------- */
+/* ----------------- work ----------------- */
+.work button {
+  width: 250px;
+  margin: 0;
+  height: 30px;
+  padding: 0 0;
+}
+
+.work h2 {
+  margin-left: 20px;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.work h2 p {
+  font-size: 15px;
+  font-weight: 400;
+}
+/* ----------------- work ----------------- */
+/* ----------------- portfolio ----------------- */
+.portfolio {
+  position: relative;
+}
+
+.portfolio h1 {
+  font-size: 50px;
+  margin: 40px 0;
+}
+
+.portfolio p {
+  margin-bottom: 30px;
+}
+
+.portfolio ul li {
+  margin: 15px 0;
+}
+
+.portfolio ul i {
+  color: #1ebd65;
+  margin-right: 20px;
+}
+
+.portfolio .sideHeading h1 {
+  left: -70px;
+}
+/* ----------------- portfolio ----------------- */
+/* ----------------- award ----------------- */
+/* .award {
+  position: relative;
+
+} */
+
+.award .content h1 {
+  font-size: 50px;
+  line-height: 50px;
+  margin: 50px 0;
+}
+
+.award .box {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 80px;
+}
+
+.award .contentRight img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.award .box img {
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+.award .sideHeading h1 {
+  left: -30px;
+}
+/* ----------------- award ----------------- */
+/* ----------------- blog ----------------- */
+.blog {
+  position: relative;
+}
+
+.blog .sideHeading h1 {
+  left: 0;
+}
+
+.blog img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.blog .box {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+  width: 80%;
+  margin: auto;
+}
+/* ----------------- blog ----------------- */
+/* ----------------- contact ----------------- */
+.contact .content i {
+  width: 40px;
+  font-size: 20px;
+  color: #1ebd65;
+}
+
+.contact .contentLeft {
+  padding: 50px;
+}
+
+form {
+  margin-top: 30px;
+}
+
+form textarea,
+form input {
+  width: 100%;
+  padding: 15px;
+  background: none;
+  outline: none;
+  margin-bottom: 20px;
+  background: #2b2b2b;
+  border: none;
+}
+/* ----------------- contact ----------------- */
